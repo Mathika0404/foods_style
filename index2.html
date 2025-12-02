@@ -73,98 +73,7 @@
   margin-top: -50px;
 }
 
-.curations-section {
-  padding: 60px 5%;
-  background: #fff;
-}
 
-/* Heading spacing fix */
-.curations-section .heading-text {
-  margin-bottom: 40px;   /* ✅ SPACE BETWEEN HEADING & IMAGES */
-}
-
-.curations-section .heading h1 {
-  margin-bottom: 10px;
-}
-
-/* Main container */
-.curations-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 35px;  /* ✅ SPACE BETWEEN ROUND IMAGES */
-  flex-wrap: wrap;
-}
-
-/* Item card */
-.curation-item {
-  text-align: center;
-  cursor: pointer;
-  min-width: 120px;
-}
-
-/* Image */
-.curation-item img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect */
-.curation-item:hover img {
-  transform: scale(1.08);
-}
-
-/* Text */
-.curation-item p {
-  margin-top: 12px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #000;
-}
-
-/* ✅ TABLET */
-@media (max-width: 1024px) {
-  .curations-container {
-    justify-content: center;
-    gap: 25px;
-  }
-}
-
-/* ✅ MOBILE */
-@media (max-width: 768px) {
-  .curations-section {
-    padding: 40px 4%;
-  }
-
-  .curations-section .heading-text {
-    margin-bottom: 25px; /* Less space for mobile */
-    text-align: center;
-  }
-
-  .curations-container {
-    gap: 20px;
-  }
-
-  .curation-item img {
-    width: 85px;
-    height: 85px;
-  }
-
-  .curation-item p {
-    font-size: 13px;
-  }
-}
-
-/* ✅ SMALL MOBILE */
-@media (max-width: 480px) {
-  .curation-item img {
-    width: 70px;
-    height: 70px;
-  }
-}
 
 /* SECTION */
 .cake-offers {
@@ -286,22 +195,19 @@
   <!-- NAVBAR -->
   <div class="navbar">
 <div class="nav-item dropdown">
-  <a href="index.html">Home</a>
+  <a href="index2.html">Home</a>
 
   <span class="arrow" onclick="toggleDropdown(this)">▾</span>
 
   <div class="dropdown-content">
-    <a href="index2.html">Home 2</a>
+    <a href="index.html">Home 1</a>
   </div>
 </div>
     <a href="experts.html" onclick="toggleMenu()">Experts</a>
     <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
     <a href="contact2.html" onclick="toggleMenu()">Contact</a>
+    <a href="login2.html" onclick="toggleMenu()">Login</a>
   </div>
-
-  <button type="button" class="login-btn" onclick="window.location.href='login.html'">
-    Sign In
-  </button>
 </header>
 
  <section class="home" id="home">
@@ -314,54 +220,6 @@
     <div class="home-img">
       <img src="./image/popcorn.webp" alt="Cake Image">
     </div>
-  </div>
-</section>
-
-
-<section class="curations-section">
-
-  <div class="curations-row">
-
-    <div class="heading-text">
-      <div class="heading">
-        <h1><span>Handcrafted</span> Curations</h1>
-      </div>
-    </div>
-
-    <div class="curations-container">
-
-      <div class="curation-item">
-        <img src="./image/ice-tea.webp" alt="Bestseller">
-        <p>Bestseller</p>
-      </div>
-
-      <div class="curation-item">
-        <img src="./image/cool-coffee.webp" alt="Drinks">
-        <p>Drinks</p>
-      </div>
-
-      <div class="curation-item">
-        <img src="./image/food_7.webp" alt="Food">
-        <p>Food</p>
-      </div>
-
-      <div class="curation-item">
-        <img src="./image/coffee.webp" alt="Merchandise">
-        <p>Merchandise</p>
-      </div>
-
-      <div class="curation-item">
-        <img src="./image/milk.webp" alt="Coffee at Home">
-        <p>Coffee At Home</p>
-      </div>
-
-      <div class="curation-item">
-        <img src="./image/chocolate.webp" alt="Ready to Eat">
-        <p>Ready to Eat</p>
-      </div>
-
-    </div>
-
   </div>
 </section>
 
@@ -487,7 +345,9 @@
       <h3>Chocolate Truffle</h3>
       <p class="price">₹550</p>
       <span class="offer">20% OFF</span>
-      <button>Order Now</button>
+      <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
     <div class="price-card">
@@ -495,15 +355,19 @@
       <h3>Chocolate Cake</h3>
       <p class="price">₹450</p>
       <span class="offer">5% OFF</span>
-      <button>Order Now</button>
+     <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
     <div class="price-card">
       <img src="./image/food_19.webp" alt="Strawberry Cake">
-      <h3>Strawberry Delight</h3>
+      <h3>Grapes Delight</h3>
       <p class="price">₹500</p>
       <span class="offer">15% OFF</span>
-      <button>Order Now</button>
+      <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
     <div class="price-card">
@@ -511,39 +375,49 @@
       <h3>Vanilla Cream</h3>
       <p class="price">₹480</p>
       <span class="offer">25% OFF</span>
-      <button>Order Now</button>
+      <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
     <div class="price-card">
       <img src="./image/food_18.webp" alt="Black Forest Cake">
-      <h3>Black Forest</h3>
+      <h3>Red Velvet</h3>
       <p class="price">₹600</p>
       <span class="offer">30% OFF</span>
-      <button>Order Now</button>
+      <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
     <div class="price-card">
-      <img src="./image/food_18.webp" alt="Black Forest Cake">
-      <h3>Black Forest</h3>
+      <img src="./image/food_6.webp" alt="Black Forest Cake">
+      <h3>Shawarma</h3>
       <p class="price">₹600</p>
       <span class="offer">30% OFF</span>
-      <button>Order Now</button>
+      <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
     <div class="price-card">
-      <img src="./image/food_18.webp" alt="Black Forest Cake">
-      <h3>Black Forest</h3>
+      <img src="./image/food_32.webp" alt="Black Forest Cake">
+      <h3>Soup Noodles</h3>
       <p class="price">₹600</p>
       <span class="offer">30% OFF</span>
-      <button>Order Now</button>
+      <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
     <div class="price-card">
-      <img src="./image/food_18.webp" alt="Black Forest Cake">
-      <h3>Black Forest</h3>
+      <img src="./image/food_30.webp" alt="Black Forest Cake">
+      <h3>Noodles</h3>
       <p class="price">₹600</p>
       <span class="offer">30% OFF</span>
-      <button>Order Now</button>
+      <a href="404.html">
+  <button>Order Now</button>
+</a>
     </div>
 
   </div>
