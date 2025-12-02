@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<link rel="stylesheet" href="./style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <style>
+/* Base Styles for Chefs Section */
+.chefs {
+  padding: 8rem 7%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+
+.heading-text {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading h1 {
+  font-size: 5rem;
+  font-family: "outfit", sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 40px;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+.heading-text p {
+  font-size: 1.8rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.chef-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.chef-box {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.chef-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--main-color), #ff8a65);
+}
+
+.chef-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+}
+
+.chef-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chef-box h2 {
+  font-size: 2.5rem;
+  font-family: "outfit", sans-serif;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.chef-box p {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  background: var(--main-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255,99,71,0.4);
+}
+
+/* =======================================================
+   XXL DESKTOP (1400px+)
+======================================================= */
+@media (min-width: 1400px) {
+  .chef-content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+}
+
+/* =======================================================
+   DESKTOP (993px - 1399px) - 3 Columns
+======================================================= */
+@media (min-width: 993px) and (max-width: 1399px) {
+  .chef-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* =======================================================
+   TABLET LARGE (769px - 992px) - 2 Columns
+======================================================= */
+@media (min-width: 769px) and (max-width: 992px) {
+  .chefs {
+    padding: 6rem 5%;
+  }
+  
+  .heading h1 {
+    font-size: 4rem;
+  }
+  
+  .chef-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .chef-box {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .chef-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* =======================================================
+   TABLET (481px - 768px) - 2 Columns
+======================================================= */
+@media (min-width: 481px) and (max-width: 768px) {
+  .chefs {
+    padding: 5rem 4%;
+  }
+  
+  .heading h1 {
+    font-size: 3.5rem;
+  }
+  
+  .heading-text p {
+    font-size: 1.6rem;
+  }
+  
+  .chef-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .chef-box {
+    padding: 2rem 1.2rem;
+  }
+  
+  .chef-img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .chef-box h2 {
+    font-size: 2.2rem;
+  }
+  
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+  }
+}
+
+/* =======================================================
+   GALAXY S/A SERIES (361px - 480px) - 1 Column
+======================================================= */
+@media (min-width: 361px) and (max-width: 480px) {
+  html {
+    font-size: 54%;
+  }
+  
+  .chefs {
+    padding: 4rem 3%;
+  }
+  
+  .heading h1 {
+    font-size: 3rem;
+  }
+  
+  .heading-text p {
+    font-size: 1.5rem;
+  }
+  
+  .chef-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
+  }
+  
+  .chef-box {
+    padding: 2rem 1rem;
+    margin: 0 5px;
+  }
+  
+  .chef-img {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .chef-box h2 {
+    font-size: 2rem;
+  }
+}
+
+/* =======================================================
+   SMALL PHONES (321px - 360px) - Galaxy Fold, Small Android
+======================================================= */
+@media (max-width: 360px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .chefs {
+    padding: 3rem 2%;
+  }
+  
+  .heading h1 {
+    font-size: 2.8rem;
+  }
+  
+  .heading-text p {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+  
+  .chef-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .chef-box {
+    padding: 1.8rem 1rem;
+  }
+  
+  .chef-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .chef-box h2 {
+    font-size: 1.8rem;
+  }
+  
+  .social-icons {
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+}
+
+/* =======================================================
+   EXTRA SMALL (≤320px) - Very old phones
+======================================================= */
+@media (max-width: 320px) {
+  html {
+    font-size: 48%;
+  }
+  
+  .chefs {
+    padding: 2.5rem 1.5%;
+  }
+  
+  .heading h1 {
+    font-size: 2.5rem;
+  }
+  
+  .chef-img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* =======================================================
+   LANDSCAPE MODE - Galaxy Phones
+======================================================= */
+@media (max-width: 768px) and (orientation: landscape) {
+  .chef-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .chef-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .heading h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Hover Effects */
+.chef-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.chef-box:hover .chef-img {
+  transform: scale(1.05);
+}
+
+    .footer-map iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 25px;
+  padding: 40px;
+  background: #111;
+  color: #fff;
+}
+
+.footer-content h2 {
+  margin-bottom: 12px;
+}
+
+.footer-center a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  color: #ff4d30;
+}
+
+.social-media a {
+  color: #ff4d30;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 170px;
+}
+
+/* ✅ Responsive (Mobile View) */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;   /* center icons */
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff4d30;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;   /* Medium size icon */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+  background: #000;
+  transform: scale(1.15);
+  box-shadow: 0 0 10px rgba(255,77,48,0.7);
+}
+
+
+    </style>
+ <header>
+  <div class="logo">
+    <img src="./image/stackly_logo.webp" alt="">
+  </div>
+
+  <!-- MENU TOGGLE ICON -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+<div class="nav-item dropdown">
+  <a href="index.html">Home</a>
+
+  <span class="arrow" onclick="toggleDropdown(this)">▾</span>
+
+  <div class="dropdown-content">
+    <a href="index2.html">Home 2</a>
+  </div>
+</div>
+    <a href="experts.html" onclick="toggleMenu()">Experts</a>
+    <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+    <a href="contact2.html" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <button type="button" class="login-btn" onclick="window.location.href='login.html'">
+    Sign In
+  </button>
+</header>
+
+<section class="chefs" id="chefs">
+  <div class="heading-text">
+    <div class="heading">
+      <h1><span>Our Expert</span> Chefs</h1>
+    </div>
+    <p>Meet our professional chefs who bring passion, taste and perfection into every dish.</p>
+  </div>
+
+  <div class="chef-content">
+
+    <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef1.webp" alt="">
+      </div>
+      <h2>James Oliver</h2>
+      <p>Head Chef</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+    
+
+    <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef2.webp" alt="">
+      </div>
+      <h2>Emma Watson</h2>
+      <p>Pastry Chef</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+    <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef3.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+    <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef4.webp" alt="">
+      </div>
+      <h2>Sophia Lee</h2>
+      <p>Asian Cuisine</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+        <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef5.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+        <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef6.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+        <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef7.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+        <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef8.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+        <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef9.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+        <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef10.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+            <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef11.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+            <div class="chef-box">
+      <div class="chef-img">
+        <img src="./image/chef12.webp" alt="">
+      </div>
+      <h2>Alex Brown</h2>
+      <p>Grill Specialist</p>
+      
+      <div class="social-icons">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-content">
+
+    <!-- Column 1 -->
+    <div class="footer-left">
+      <img src="./image/stackly_logo.webp" style="width: 250px; height: 100px;" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, error?</p>
+
+      <div class="social-media">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-center">
+      <h2>Quick Links</h2>
+      <a href="index2.html">Home</a>
+      <a href="experts.html">Experts</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact2.html">Contact</a>
+      <a href="login2.html">Login</a>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-right">
+      <h2>GET IN TOUCH</h2>
+      <p><i class='bx bx-map'></i> Madurai, Tamilnadu</p>
+      <p><i class='bx bx-phone'></i> Phone : +91 9047366579</p>
+      <p><i class='bx bx-phone'></i> Tel : +91 9047366578</p>
+      <p><i class='bx bx-envelope'></i> Email: stackly@gmail.com</p>
+    </div>
+
+    <!-- Column 4 (MAP) -->
+    <div class="footer-map">
+      <h2>Location</h2>
+      <iframe 
+        src="https://maps.google.com/maps?q=Madurai%20Tamilnadu&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="170"
+        style="border:0; border-radius:8px;"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+  <hr>
+  <p class="copyright">Copyright © 2024 | All Right Reserved</p>
+</footer>
+<script src="./main.js"></script>
+      <script>
+function toggleDropdown(arrow) {
+    const dropdown = arrow.parentElement;
+    dropdown.classList.toggle("active");
+}
+</script>
+</body>
+</html>

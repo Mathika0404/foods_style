@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<link rel="stylesheet" href="./style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<style>
+        .footer-map iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 25px;
+  padding: 40px;
+  background: #111;
+  color: #fff;
+}
+
+.footer-content h2 {
+  margin-bottom: 12px;
+}
+
+.footer-center a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  color: #ff4d30;
+}
+
+.social-media a {
+  color: #ff4d30;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 170px;
+}
+
+/* ✅ Responsive (Mobile View) */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<body>
+
+ <header>
+  <div class="logo">
+    <img src="./image/stackly_logo.webp" alt="">
+  </div>
+
+  <!-- MENU TOGGLE ICON -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+<div class="nav-item dropdown">
+  <a href="index.html">Home</a>
+
+  <span class="arrow" onclick="toggleDropdown(this)">▾</span>
+
+  <div class="dropdown-content">
+    <a href="index2.html">Home 2</a>
+  </div>
+</div>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="menu.html" onclick="toggleMenu()">Menu</a>
+    <a href="order.html" onclick="toggleMenu()">Order</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <button type="button" class="login-btn" onclick="window.location.href='login.html'">
+    Sign In
+  </button>
+</header>
+
+     <section class="order" id="order">
+        <div class="heading-text">
+            <div class="heading">
+                <h1><span> Order</span> Now</h1>
+                <p></p>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor quas <br> magni aliquam quibusdam voluptas rem.</p>
+        </div>
+
+        <div class="order-section">
+            <div class="order-img">
+                <img src="./image/order_image.webp" alt="">
+            </div>
+            <div class="order-text">
+                <h2>Get Favourite dish at door <span>step</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic corporis minima neque dolores perferendis ipsam accusamus soluta illo, dignissimos deleniti?</p>
+<form id="contactForm">
+    <div class="input-box">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+    </div>
+    <div class="input-box">
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="location" placeholder="Location" required>
+    </div>
+    <textarea id="description" placeholder="Describe Your Location in brief explanation" required></textarea>
+
+    <button type="submit">SEND MESSAGE</button>
+</form>
+
+            </div>
+        </div>
+     </section>
+
+
+
+<footer>
+  <div class="footer-content">
+
+    <!-- Column 1 -->
+    <div class="footer-left">
+      <img src="./image/stackly_logo.webp" style="width: 250px; height: 100px;" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, error?</p>
+
+      <div class="social-media">
+        <a href="404.html"><i class='bx bxl-facebook'></i></a>
+        <a href="404.html"><i class='bx bxl-instagram'></i></a>
+        <a href="404.html"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-center">
+      <h2>Quick Links</h2>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="order.html">Order</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-right">
+      <h2>GET IN TOUCH</h2>
+      <p><i class='bx bx-map'></i> Madurai, Tamilnadu</p>
+      <p><i class='bx bx-phone'></i> Phone : +91 9047366579</p>
+      <p><i class='bx bx-phone'></i> Tel : +91 9047366578</p>
+      <p><i class='bx bx-envelope'></i> Email: stackly@gmail.com</p>
+    </div>
+
+    <!-- Column 4 (MAP) -->
+    <div class="footer-map">
+      <h2>Location</h2>
+      <iframe 
+        src="https://maps.google.com/maps?q=Madurai%20Tamilnadu&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="170"
+        style="border:0; border-radius:8px;"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+  <hr>
+  <p class="copyright">Copyright © 2024 | All Right Reserved</p>
+</footer>
+
+
+<!-- PASTE ORDER SECTION -->
+
+<script src="./main.js"></script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop default submit
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let address = document.getElementById("address").value.trim();
+    let location = document.getElementById("location").value.trim();
+    let description = document.getElementById("description").value.trim();
+
+    if (name === "" || email === "" || address === "" || location === "" || description === "") {
+        alert("⚠️ Please fill in all fields!");
+        return;
+    }
+
+    // If all fields are valid, redirect
+    window.location.href = "404.html"; 
+});
+
+
+    function toggleDropdown(arrow) {
+    const dropdown = arrow.parentElement;
+    dropdown.classList.toggle("active");
+}
+  </script>
+
+
+</body>
+</html>
