@@ -142,9 +142,9 @@ header button:hover{
 
 /* Arrow Style */
 .arrow {
-  cursor: pointer;
-  margin-left: 5px;
-  font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 18px;
 }
 
 /* Dropdown Box */
@@ -172,9 +172,12 @@ header button:hover{
     display: none;
 }
 .dropdown.active .dropdown-content {
-    display: block;
+    display: block !important;
 }
 
+.dropdown.active .arrow {
+    transform: rotate(180deg);
+}
 
 /* MENU ICON */
 .menu-toggle {

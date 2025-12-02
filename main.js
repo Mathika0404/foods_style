@@ -19,14 +19,12 @@ document.querySelectorAll(".arrow").forEach((arrow) => {
   });
 });
 
-document.querySelectorAll(".arrow, .nav-item > a").forEach((elem) => {
-  elem.addEventListener("click", function (e) {
-    e.preventDefault(); // prevent navigation if needed
+document.querySelectorAll(".arrow").forEach((arrow) => {
+  arrow.addEventListener("click", function (e) {
     e.stopPropagation();
-    this.closest(".nav-item").classList.toggle("active");
+    this.parentElement.classList.toggle("active");
   });
 });
-
 
 
 
