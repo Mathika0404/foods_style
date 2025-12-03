@@ -27,6 +27,13 @@ document.querySelectorAll(".arrow").forEach((arrow) => {
 });
 
 
+// Force TAB key behavior
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Tab") {
+    console.log("Tab pressed - focus moving");
+  }
+});
+
 
 // Swiper JavaScript
 
