@@ -326,7 +326,19 @@ button:hover{
 
 .about-img img{
     width: 100%;
+  animation: rotatePlate 12s linear infinite;
 }
+
+/* Rotation animation */
+@keyframes rotatePlate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .about-content .about-text{
     width: 40%;
 }
@@ -881,6 +893,9 @@ button:hover{
 }
 
 .price-card button {
+  display: block;
+  margin: 12px auto 0;
+
   padding: 8px 15px;
   border: none;
   background: #ff4d4d;
@@ -888,6 +903,7 @@ button:hover{
   cursor: pointer;
   border-radius: 5px;
 }
+
 
 /* Mobile View */
 @media (max-width:480px){
@@ -1243,6 +1259,292 @@ footer{
   max-height: 300px; 
 }
 }
+
+.triangle-swap img {
+  width: 250px;
+  height: 250px;
+}
+
+.triangle-swap {
+  position: relative;
+  width: 520px;
+  height: 480px;
+  margin: auto;
+}
+
+.swap {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 1s ease;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.img1 {
+  animation-name: swap1;
+}
+
+@keyframes swap1 {
+  0%   { transform: translate(135px, 0); }
+  33%  { transform: translate(270px, 230px); }
+  66%  { transform: translate(0, 230px); }
+  100% { transform: translate(135px, 0); }
+}
+
+.img2 {
+  animation-name: swap2;
+}
+
+@keyframes swap2 {
+  0%   { transform: translate(270px, 230px); }
+  33%  { transform: translate(0, 230px); }
+  66%  { transform: translate(135px, 0); }
+  100% { transform: translate(270px, 230px); }
+}
+
+
+.img3 {
+  animation-name: swap3;
+}
+
+@keyframes swap3 {
+  0%   { transform: translate(0, 230px); }
+  33%  { transform: translate(135px, 0); }
+  66%  { transform: translate(270px, 230px); }
+  100% { transform: translate(0, 230px); }
+}
+
+
+.heading-animate {
+  animation: slideHeading 6s ease-in-out infinite alternate;
+}
+
+@keyframes slideHeading {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+.heading-animate h1,
+.heading-animate p {
+  animation: fadeUp 2s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading-animate h1 {
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* Container */
+.snack-animations {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  margin: auto;
+}
+
+
+.snack {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+}
+
+.snack1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.snack2 {
+  bottom: 0;
+  right: 0;
+}
+
+.snack3 {
+  bottom: 0;
+  left: 0;
+}
+
+.snack-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.snack1 .snack-img {
+  animation:
+    jumpFromTop 1s ease-out forwards,
+    floatPulse 4s ease-in-out infinite 1s,
+    infiniteRotate 12s linear infinite;
+}
+
+.snack2 .snack-img {
+  animation:
+    slideFromRight 1s ease-out forwards,
+    floatRotateLeft 6s ease-in-out infinite 1s,
+    infiniteRotate 14s linear infinite;
+}
+
+.snack3 .snack-img {
+  animation:
+    slideFromLeft 1s ease-out forwards,
+    floatRotateRight 6s ease-in-out infinite 1s,
+    infiniteRotate 16s linear infinite;
+}
+
+
+@keyframes infiniteRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes jumpFromTop {
+  0% {
+    transform: translate(-50%, -120px) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, 10px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*Home 2 Service section*/
+.services-img img {
+  width: 100%;
+  animation: infiniteRotate 18s linear infinite;
+  transform-origin: center;
+}
+
+/* Pause on hover or keyboard focus */
+.services-img img:hover,
+.services-img img:focus {
+  animation-play-state: paused;
+}
+
+/* Keyframes */
+@keyframes infiniteRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Container animation setup */
+/* 2 rows × 2 columns layout */
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Service box style */
+.service-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  opacity: 0;
+  transform: translateX(80px);
+  animation: slideFromRight 0.8s ease forwards;
+}
+
+/* Stagger effect */
+.service-box:nth-child(1) { animation-delay: 0.2s; }
+.service-box:nth-child(2) { animation-delay: 0.4s; }
+.service-box:nth-child(3) { animation-delay: 0.6s; }
+.service-box:nth-child(4) { animation-delay: 0.8s; }
+
+/* Image style */
+.service-box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.service-box:hover {
+  transform: translateX(0) translateY(-4px);
+}
+
 
 
 /* =======================================================
