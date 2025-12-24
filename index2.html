@@ -173,6 +173,98 @@
     gap: 20px;
   }
 }
+
+/* Heading animation */
+.heading-text {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: headingFadeDown 1.2s ease forwards;
+}
+
+@keyframes headingFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading h2 span {
+  color: #ff5a3c;
+}
+
+.offers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 1s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Staggered animation delay */
+.offer-card:nth-child(1) { animation-delay: 0.2s; }
+.offer-card:nth-child(2) { animation-delay: 0.4s; }
+.offer-card:nth-child(3) { animation-delay: 0.6s; }
+.offer-card:nth-child(4) { animation-delay: 0.8s; }
+.offer-card:nth-child(5) { animation-delay: 1s; }
+
+@keyframes cardFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.offer-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effects */
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+.offer-card:hover img {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.offer-card p {
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.offer-card span {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 5px 14px;
+  background: #fde68a;
+  color: #92400e;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
 </style>
 <body>
     
@@ -216,7 +308,20 @@
 
     </div>
     <div class="home-img">
-      <img src="./image/popcorn.webp"tabindex="0" alt="Cake Image">
+<div class="snack-animations">
+  <div class="snack snack1">
+    <img src="./image/header11.webp" class="snack-img">
+  </div>
+
+  <div class="snack snack2">
+    <img src="./image/header12.webp" class="snack-img">
+  </div>
+
+  <div class="snack snack3">
+    <img src="./image/header13.webp" class="snack-img">
+  </div>
+</div>
+
     </div>
   </div>
 </section>
