@@ -922,6 +922,11 @@ button:hover{
   .price {
     font-size: 15px;
   }
+
+    .home-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+  }
 }
 
 .services {
@@ -1000,8 +1005,8 @@ button:hover{
     align-items: center;
     text-align: center;
   }
+  
 }
-
 
 /* Footer Section CSS */
 
@@ -1317,125 +1322,6 @@ footer{
 }
 
 
-.heading-animate {
-  animation: slideHeading 6s ease-in-out infinite alternate;
-}
-
-@keyframes slideHeading {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(30px);
-  }
-}
-
-.heading-animate h1,
-.heading-animate p {
-  animation: fadeUp 2s ease both;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.heading-animate h1 {
-  white-space: nowrap;
-  animation: marquee 10s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(40px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-
-/* Container */
-.snack-animations {
-  position: relative;
-  width: 420px;
-  height: 420px;
-  margin: auto;
-}
-
-
-.snack {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-}
-
-.snack1 {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-}
-
-.snack2 {
-  bottom: 0;
-  right: 0;
-}
-
-.snack3 {
-  bottom: 0;
-  left: 0;
-}
-
-.snack-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-}
-
-.snack1 .snack-img {
-  animation:
-    jumpFromTop 1s ease-out forwards,
-    floatPulse 4s ease-in-out infinite 1s,
-    infiniteRotate 12s linear infinite;
-}
-
-.snack2 .snack-img {
-  animation:
-    slideFromRight 1s ease-out forwards,
-    floatRotateLeft 6s ease-in-out infinite 1s,
-    infiniteRotate 14s linear infinite;
-}
-
-.snack3 .snack-img {
-  animation:
-    slideFromLeft 1s ease-out forwards,
-    floatRotateRight 6s ease-in-out infinite 1s,
-    infiniteRotate 16s linear infinite;
-}
-
-
-@keyframes infiniteRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
 @keyframes jumpFromTop {
   0% {
     transform: translate(-50%, -120px) scale(0.8);
@@ -1471,6 +1357,57 @@ footer{
     opacity: 1;
   }
 }
+
+
+/* Container */
+.snack-animations {
+  position: relative;
+  width: 100%;
+  height: 320px;            /* safe height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Image wrapper */
+.snack-rotate {
+  width: 500px;             /* ✅ larger image */
+  height: 500px;
+  animation: rotateSnack 12s linear infinite;
+}
+
+/* Image */
+.snack-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 50%; */
+}
+
+/* Rotation animation */
+@keyframes rotateSnack {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 360px) {
+
+  .snack-animations {
+    height: 240px;          /* reduced height */
+  }
+
+  .snack-rotate {
+    width: 300px;           /* 🔽 smaller on mobile */
+    height: 300px;
+    animation-duration: 10s; /* slightly faster feels better on mobile */
+  }
+}
+
 
 /*Home 2 Service section*/
 .services-img img {
@@ -1562,10 +1499,27 @@ footer{
     padding:10px;
   }
 
+  .offers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* ✅ center all cards */
+  }
 
+  .offer-card {
+    width: 100%;
+    max-width: 260px;         /* ✅ fits 360px screens */
+    margin: 0 auto 1.5rem;
+    text-align: center;
+  }
+
+  .offer-card img {
+    display: block;
+    margin: 0 auto;           /* ✅ center image */
+    max-width: 160px;         /* ✅ prevent overflow */
+    height: auto;
+  }
 
 }
-
 
 
 /* =======================================================
