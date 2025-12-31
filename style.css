@@ -179,6 +179,51 @@ header button:hover{
     transform: rotate(180deg);
 }
 
+/* MOBILE FIX */
+@media screen and (max-width: 360px) {
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+
+  .dropdown {
+    position: relative;
+    width: 100%;
+  }
+
+  .home-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* Dropdown under Home */
+  .dropdown-content {
+    position: relative;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+  }
+
+  .dropdown-content a {
+    padding: 12px;
+    text-align: center;
+  }
+
+}
+
 /* MENU ICON */
 .menu-toggle {
   display: none;
@@ -924,7 +969,7 @@ button:hover{
   }
 
     .home-text-content p {
-    font-size: 1.1rem;
+    font-size: 2rem;
     line-height: 1.9;
   }
 }
@@ -1518,6 +1563,8 @@ footer{
     max-width: 160px;         /* ✅ prevent overflow */
     height: auto;
   }
+
+  
 
 }
 
